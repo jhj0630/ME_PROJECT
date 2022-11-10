@@ -60,13 +60,9 @@
             margin-left: 100px;
             height: 75px;
             display: flex;
-            font-size: 25px;
             align-items: center;
         }
         header > .logo > a{
-            text-decoration: none;
-            color: #0062F2;
-            font-weight: bold;
         }
         header > .link{
             width: 500px;
@@ -190,7 +186,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="member_main.php">생체전류와 MBTI</a></div>
+        <div class="logo"><a href="member_main.php" style="text-decoration: none;color: #0062F2; font-weight: bold; font-size: 27px; letter-spacing: 2px">ME </a><a href="member_main.php" style="text-decoration: none; color: #404040; font-size: 15; margin-top: 10px; font-weight: bold; margin-left: 10px"> MBTI WITH ELECTRIC </a></div>
         <div class="link">
             <?php
             if(!isset($id)){?>
@@ -316,7 +312,7 @@
                         <td>N <input type="range" min="1" max="100" value="<?=$NS?>" class="slider" NAME="MBTI_NS" id="MBTI_NS" onkeyup='printNum_NS()'> S<div id="input_MBTI_NS"></div></td>
                     </tr>
                     <tr> 
-                        <td>F <input type="range" min="1" max="100" value="<?=$FT?>" class="slider" NAME="MBTI_FT" id="MBTI_FT" onkeyup='printNum_FT()'> F<div id="input_MBTI_FT"></div></td>
+                        <td>F <input type="range" min="1" max="100" value="<?=$FT?>" class="slider" NAME="MBTI_FT" id="MBTI_FT" onkeyup='printNum_FT()'> T<div id="input_MBTI_FT"></div></td>
                     </tr>
                     <tr> 
                         <td>J <input type="range" min="1" max="100" value="<?=$JP?>" class="slider" NAME="MBTI_JP" id="MBTI_JP" onkeyup='printNum_JP()'> P<div id="input_MBTI_JP"></div></td>
@@ -401,6 +397,7 @@
             const MBTI_JP_num = document.getElementById('MBTI_JP').value;
             document.getElementById("input_MBTI_JP").innerText = MBTI_JP_num;
         }
+        
     </script>
 </body>
 </html>
