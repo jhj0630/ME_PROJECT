@@ -20,7 +20,7 @@ if(!$connect){
         trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 
-$id = $_POST["name"];
+$id = $_POST["req_search_ID"];
 $sql = oci_parse($connect, "SELECT PW FROM REQUEST WHERE ID='$id'");
 oci_execute($sql);
 $result = oci_fetch_assoc($sql);
