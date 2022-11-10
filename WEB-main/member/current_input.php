@@ -485,8 +485,8 @@
         <div class="current_input">
             <div class="Input">
                 <div class="Input_con">전류 데이터 입력<span style="font-weight: normal; font-size: 15px; display: inline-block; float: right; margin-right: 4%">🕓 <span id="clock"></span></span></div>
-                <div class="InputData_canvans_left"><canvas id="currents_data_left" style="height: 200vh"></canvas></div>
-                <div class="InputData_canvans_right"><canvas id="currents_data_right" style="height: 200vh"></canvas></div>
+                <div class="InputData_canvans_left"><canvas id="currents_data_left"></canvas></div>
+                <div class="InputData_canvans_right"><canvas id="currents_data_right"></canvas></div>
                 
                 <form class="InputData" method="POST">
                     <div class="tables">
@@ -643,7 +643,7 @@
                                     }]
                                 },
                                 options: {
-                                    responsive: true,
+                                    maintainAspectRatio: false,
                                     title: {
                                         display: false,
                                         text: '왼손 전류 데이터'
@@ -689,7 +689,7 @@
                                     }]
                                 },
                                 options: {
-                                    responsive: true,
+                                    maintainAspectRatio: false,
                                     title: {
                                         display: false,
                                         text: '오른손 전류 데이터'
