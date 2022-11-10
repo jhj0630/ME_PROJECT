@@ -115,7 +115,6 @@ else
             position: absolute;
             left: 200px;
             height: 50px;
-            z-index:2;
         }
 
         .member > .search > .search_id > .search_id_text{
@@ -184,6 +183,7 @@ else
             border-bottom-left-radius: 800px 60px;
         }
         .main1 > .manager_request{
+            margin-top: 50px;
             margin-left: 100px;
             display: inline-block;
             height: 200px; 
@@ -306,8 +306,8 @@ else
                 </form>
             </div>
         </div>
-        <div class="member_info">
-                <table class="member_info_table" style="height: 500px; overflow-y: auto">
+        <div class="member_info" style="height: 600px; overflow-y: auto">
+                <table class="member_info_table">
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -342,7 +342,7 @@ else
                             <td style="text-align: center"><?=$SEX?></td>
                             <td style="text-align: center"><?=$PHONE?></td>
                             <td style="text-align: center"><?=$EMAIL?></td>
-                            <td><a style="text-decoration: none; color: #0062F2" href="delete_Member.php?num=<?=$NUM?>" onclick="return confirm('회원 정보를 삭제하시겠습니까?')">삭제</a></td>
+                            <td><a style="text-decoration: none; color: #0062F2" href="delete_Member.php?num=<?=$ID?>" onclick="return confirm('회원 정보를 삭제하시겠습니까?')">삭제</a></td>
                         </tr>
                     <?php
                                 $num++;
@@ -372,15 +372,18 @@ else
                             
                     ?>
                     <tbody>
-                        <tr>
-                            <td style="text-align: center"><?=$NUM?></td>
-                            <td><a href="manager_currents.php?ID=<?=$ID?>" style="text-decoration: none; color: #0062F2"><?=$ID?></a></td>
-                            <td style="text-align: center"><?=$AGE?></td>
-                            <td><?=$SEX?></td>
-                            <td style="text-align: center"><?=$PHONE?></td>
-                            <td><?=$EMAIL?></td>
-                            <td><a style="text-decoration: none; color: #0062F2" href="delete_Member.php?num=<?=$NUM?>" onclick="return confirm('회원 정보를 삭제하시겠습니까?')">삭제</a></td>
-                        </tr>
+                        <form method="post" action="delete_Member.php">
+                            <input type = "hidden" name = "delID" value ="<?=$ID?>">
+                            <tr>
+                                <td style="text-align: center"><?=$NUM?></td>
+                                <td><a href="manager_currents.php?ID=<?=$ID?>" style="text-decoration: none; color: #0062F2"><?=$ID?></a></td>
+                                <td style="text-align: center"><?=$AGE?></td>
+                                <td><?=$SEX?></td>
+                                <td style="text-align: center"><?=$PHONE?></td>
+                                <td><?=$EMAIL?></td>
+                                <td><input type="submit" style="text-decoration: none; color: #0062F2" onclick="return confirm('<?=$ID?> 회원 정보를 삭제하시겠습니까?')" value="삭제"></td>
+                            </tr>
+                        </form>
                     <?php
                             $num++;
                             }
@@ -421,6 +424,7 @@ else
                             ?>
                             <tbody>
                                 <tr>
+                                    <input type = "hidden" name = "req_search_ID" value ="<?=$req_search_ID?>">
                                     <td><?=$req_search_ID?></td>
                                     <td style="text-align: center; width: 100px"><input type="submit" name= "y" value = "승인" class="y_btn"></td>
                                     <td style="text-align: center; width: 100px"><input type="submit" name= "n" value = "거절" class="n_btn"></td>
@@ -441,6 +445,7 @@ else
                             
                             ?>
                             <tbody>
+                                <input type = "hidden" name = "req_search_ID" value ="<?=$req_search_ID?>">
                                 <tr>
                                     <td><?=$req_search_ID?></td>
                                     <td style="text-align: center; width: 100px"><input type="submit" name= "y" value = "승인" class="y_btn"></td>
