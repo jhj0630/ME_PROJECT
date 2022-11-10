@@ -1,3 +1,4 @@
+<?php
 $db = '
 (DESCRIPTION =
 (ADDRESS_LIST =
@@ -28,15 +29,15 @@ $pw = $result["PW"];
 
 
 if($_POST["y"]){
-    $sql1 = oci_parse($connect, "INSERT INTO MANAGER (M_ID, M_PW) VALUES ('$id', '$pw')");
-    oci_execute($sql1);
-    $sql2 = oci_parse($connect, "DELETE FROM REQUEST WHERE ID='$id'");
-    oci_execute($sql2);
+    $sql = oci_parse($connect, "INSERT INTO MANAGER (M_ID, M_PW) VALUES ('$id', '$pw')");
+    oci_execute($sql);
+    $sql = oci_parse($connect, "DELETE FROM REQUEST WHERE ID='$id'");
+    oci_execute($sql);
 }
 else if($_POST["n"]){
-    $sql3 = oci_parse($connect, "DELETE FROM REQUEST WHERE ID='$id'");
-    oci_execute($sql3);
+    $sql = oci_parse($connect, "DELETE FROM REQUEST WHERE ID='$id'");
+    oci_execute($sql);
 }
 
-//echo "<script>location.href='manager_main.php'</script>";
+echo "<script>location.href='manager_main.php'</script>";
 ?>
