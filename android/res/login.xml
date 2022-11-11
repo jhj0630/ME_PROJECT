@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#2a3a90">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#2a3a90"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+                <ImageView
+                    android:layout_margin="40dp"
+                    android:id="@+id/img"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:src="@drawable/w_logo4" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="#2a3a90"
+            android:layout_weight="3"
+            tools:ignore="MissingConstraints">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/layout_login"
+                android:gravity="center"
+                android:background="@drawable/btn_l_round_white"
+                tools:ignore="MissingConstraints,NotSibling">
+
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Login"
+                        android:textColor="#2a3a90"
+                        android:textSize="40dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_gravity="center">
+                    <!--<TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:text="ID: "
+                        android:textSize="30dp"
+                        android:id="@+id/idtext"
+                        android:gravity="center"
+                        tools:ignore="MissingConstraints" />-->
+
+                    <EditText
+                        android:id="@+id/id"
+                        android:paddingVertical="30dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn_r_white"
+                        android:hint="  ID"
+                        android:inputType="textPersonName" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_gravity="center">
+                    <!--<TextView
+                        android:id="@+id/passwordtext"
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:layout_weight="1"
+                        android:text="PW:"
+                        android:textSize="30dp" />-->
+
+                    <EditText
+                        android:id="@+id/pw"
+                        android:paddingVertical="30dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:background="@drawable/btn_r_white"
+                        android:hint=" PW"
+                        android:inputType="textPassword" />
+                </TableRow>
+<!--                <TableRow
+                    android:gravity="center_horizontal"
+                    android:layout_margin="10dp">
+                    <CheckBox
+                        android:id="@+id/cb"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="로그인 정보 저장"
+                        android:textSize="20dp"/>
+                </TableRow>-->
+                <TableRow
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginHorizontal="10dp">
+                    <Button
+                        android:id="@+id/loginbtn"
+                        android:paddingVertical="10dp"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"
+                        android:text="Login"
+                        android:textStyle="normal"
+                        android:gravity="center"
+                        android:textColor="#fafafa"
+                        android:background="@drawable/btn_round_blue"
+                        android:textSize="30dp" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_horizontal">
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="아이디 및 비밀번호를 잊으셨나요?"
+                        app:layout_constraintTop_toBottomOf="@id/layout_login"
+                        android:textSize="15dp" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_gravity="center_horizontal">
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/idbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="아이디 찾기"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#fafafa"
+                        android:background="@drawable/btn_round_blue"
+                        android:textSize="15dp" />
+
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/pwbtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="비밀번호 찾기"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="#fafafa"
+                        android:background="@drawable/btn_round_blue"
+                        android:textSize="15dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:background="#2a3a90">
+
+    <LinearLayout
+        android:id="@+id/img_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:layout_margin="40dp"
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:src="@drawable/w_logo4" />
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/btn_round_1"
+        app:layout_constraintTop_toBottomOf="@id/img_layout"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:id="@+id/input_text4"
+            android:text=" \n   측정 값 입력하기 - 오른쪽 손등\n"
+            android:textSize="15dp"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+    <ImageView
+            android:id="@+id/right2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:src="@drawable/r_hand2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@id/table_input4"
+            app:layout_constraintTop_toBottomOf="@+id/input_text4"
+            tools:ignore="MissingConstraints"  />
+
+        <TableLayout
+            app:layout_constraintTop_toBottomOf="@id/right2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/table_input4"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <TextView
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    android:textSize="20dp"
+                    android:id="@+id/text7"
+                    android:layout_weight="1"
+                    android:text="7\n삼초" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/text8"
+                    android:layout_weight="1"
+                    android:text="8\n소장" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/text9"
+                    android:layout_weight="1"
+                    android:text="9\n대장" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/text10"
+                    android:layout_weight="1"
+                    android:text="10\n쓸개" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/text11"
+                    android:layout_weight="1"
+                    android:text="11\n방광" />
+
+                <TextView
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:id="@+id/text12"
+                    android:layout_weight="1"
+                    android:text="12\n신장" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/r7"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/r8"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/r9"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/r10"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/r11"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/r12"
+                    android:gravity="center"
+                    android:layout_height="60dp"
+                    android:hint="입력"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_weight="1"/>
+            </TableRow>
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/layout4_btn"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/table_input4"
+            tools:ignore="MissingConstraints,NotSibling">
+
+            <Button
+                android:id="@+id/before4"
+                android:layout_margin="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="이전"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:background="@drawable/btn_round_yellow_2"/>
+
+            <Button
+                android:id="@+id/finish"
+                android:layout_margin="10dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:text="완료"
+                android:layout_weight="1"
+                android:textSize="20dp"
+                android:textColor="#fafafa"
+                android:background="@drawable/btn_round_yellow"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
