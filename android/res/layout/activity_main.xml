@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#2a3a90"
+    tools:context=".MainActivity">
+<!--
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main_cons"
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/main_table">-->
+        <ImageView
+            android:layout_margin="50dp"
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/main_table"
+            android:src="@drawable/w_logo4" />
+  <!--  </androidx.constraintlayout.widget.ConstraintLayout>
+-->
+    <TableLayout
+        android:id="@+id/main_table"
+        app:layout_constraintTop_toBottomOf="@id/img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_weight="2"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="10dp">
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:text="기존 회원이신가요? "
+            android:textSize="25dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"/>
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:text="로그인"
+            android:textSize="20dp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:textColor="#2a3a90"
+            android:background="@drawable/btn_main"
+            android:layout_weight="1"
+            />
+        </TableRow>
+        <TableRow
+            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp">
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="새로운 회원이신가요? "
+                android:layout_margin="10dp"
+                android:textSize="23dp"
+                android:layout_weight="2"/>
+            <Button
+                android:id="@+id/signup_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#2a3a90"
+                android:background="@drawable/btn_main"
+                android:text="회원가입"
+                android:layout_margin="10dp"
+                android:textSize="20dp"
+                android:layout_weight="1"/>
+        </TableRow>
+    </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
