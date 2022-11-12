@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#2a3a90">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+            <ImageView
+                android:layout_margin="50dp"
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:src="@drawable/w_logo4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_round_1"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:background="@drawable/btn_square_white"
+                android:id="@+id/ch"
+                android:layout_margin="20dp"
+                android:paddingVertical="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginHorizontal="40dp"
+                android:orientation="horizontal">
+                <TableRow
+                    android:padding="10dp"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_marginHorizontal="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="수면시간: " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:id="@+id/sleep"
+                        android:textSize="20dp"
+                        android:text="" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_marginHorizontal="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="몸상태: " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:id="@+id/body"
+                        android:text="" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_marginHorizontal="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="흡연 여부: " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:id="@+id/smoking"
+                        android:text="" />
+                </TableRow>
+                <TableRow
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp"
+                    android:background="@drawable/btn_r_white"
+                    android:layout_marginHorizontal="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:text="음주 여부: " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="20dp"
+                        android:id="@+id/drink_"
+                        android:text="" />
+                </TableRow>
+                </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
