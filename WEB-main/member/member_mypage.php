@@ -300,6 +300,7 @@
     $type5 = array("INTJ", "ENTJ", "ISTJ", "ESTJ");
     $type6 = array("ISTJ", "ISFJ");
     $type7 = array("ENFP", "ESFP");
+    $type0 = "undifined";
 
     if($body_type == 1){
         $type = $type1;
@@ -323,7 +324,8 @@
         $type = $type7;
     }
     else{
-        $type = "";
+        $type = $type0;
+        $body_type = 0;
     }
     oci_free_statement($avg_result1);
     oci_free_statement($avg_result3);
@@ -638,7 +640,6 @@
             else{?>
                 <a href="current_input.php">전류입력 </a>
                 <a href="member_mypage.php" style="border-right: solid 8px #0062F2">마이페이지</a>
-                <a href="classification.php">현태전용링크>,0</a>
             <?php
             }?>
 
@@ -691,7 +692,7 @@
                     else{
                         mbti += "P";
                     }
-                    var body_type = <?=$body_type?>;  
+                    var body_type = <?=$body_type?>; 
                     
                     var type1 = ["ISTP", "ISTJ", "ESTP", "ESTJ"];
                     var type2 = ["ENFJ", "ESFJ"];
@@ -700,6 +701,7 @@
                     var type5 = ["INTJ", "ENTJ", "ISTJ", "ESTJ"];
                     var type6 = ["ISTJ", "ISFJ"];
                     var type7 = ["ENFP", "ESFP"];
+                    var type0 = [""];
 
                     var max = 0;
                     if(body_type == 1){
@@ -929,6 +931,9 @@
                             max = count;
                         }
                     }
+                    else if(body_type == 0){
+                        max = 0;
+                    }
                     mbti_rate = max;
 
                     if(mbti == "ESTJ"){
@@ -1132,6 +1137,25 @@
                                 }
                             }
                         });
+                    }
+                    else if(body_type == 0){
+                        new Chart(document.getElementById("my_currents_MBTI_pie-chart"), {
+                            type: 'pie',
+                            data: {
+                                labels: ['판별 불가'],
+                                datasets: [{
+                                    label: "RESULT",
+                                    backgroundColor: [color],
+                                    data: [0, 100]
+                                }]
+                            },
+                            options: {
+                                title: {
+                                    display: false,
+                                    text: '나의 생체전류 MBTI'
+                                }
+                            }
+                        });                     
                     }
                     new Chart(document.getElementById("my_MBTI_perc_pie-chart"), {
                         type: 'doughnut',
