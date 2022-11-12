@@ -60,13 +60,9 @@
             margin-left: 100px;
             height: 75px;
             display: flex;
-            font-size: 25px;
             align-items: center;
         }
         header > .logo > a{
-            text-decoration: none;
-            color: #0062F2;
-            font-weight: bold;
         }
         header > .link{
             width: 500px;
@@ -242,7 +238,7 @@
 </head>
 <body>
     <header>
-        <div class="logo"><a href="member_main.php">생체전류와 MBTI</a></div>
+        <div class="logo"><a href="member_main.php" style="text-decoration: none;color: #0062F2; font-weight: bold; font-size: 27px; letter-spacing: 2px">ME </a><a href="member_main.php" style="text-decoration: none; color: #404040; font-size: 15; margin-top: 10px; font-weight: bold; margin-left: 10px"> MBTI WITH ELECTRIC </a></div>
         <div class="link">
             <?php
             if(!isset($id)){?>
@@ -312,12 +308,12 @@
                 <p>측정한 생체 전류 데이터를 관리</p>
             </div>
             <div class="content2">
-                <div class="sub_title_num2">function 1</div>
+                <div class="sub_title_num2">function 2</div>
                 <div class="sub_title">내 데이터 그래프로 한 눈에 보기</div>
                 <p>1개월, 3개월, 6개월 데이터 평균 패턴 그래프로 확인 가능</p>
             </div>
             <div class="content3">
-                <div class="sub_title_num3">function 1</div>
+                <div class="sub_title_num3">function 3</div>
                 <div class="sub_title">나의 객관적 MBTI 예측값 확인</div>
                 <p>나의 MBTI와 예측 결과의 일치율 제공</p>
             </div>  
