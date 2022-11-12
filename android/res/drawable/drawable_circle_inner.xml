@@ -3,5 +3,5 @@
     android:shape = "ring"
     android:thickness = "50dp"
     android:useLevel = "false">
-    <solid android:color = "@color/cardview_light_background"/>
+    <solid android:color = "#cecece"/>
 </shape>
