@@ -476,7 +476,7 @@
         .MBTI_result > .MBTI_chart > .my_MBTI_perc{
             display: flex;
             float: left;
-            height: 600px;
+            height: 450px;
             width: 40%;
             display: inline-block;
             margin-left: 5%;
@@ -488,7 +488,7 @@
         .MBTI_result > .MBTI_chart >.my_currents_MBTI{
             display: flex;
             float: right;
-            height: 600px;
+            height: 450px;
             width: 40%;
             display: inline-block;
             margin-right: 5%;
@@ -512,17 +512,19 @@
             margin-top: 120px;
         }
         .graph > .currents_data_left_div{
+            width: 90%;  
             height: 310px;
-            width: 90%;
             padding: 20px;
             margin-left: 2.5%;
             margin-top: 20px;
+            margin-right: 2.5%;
         }
         .graph > .currents_data_right_div{
+            width: 90%;  
             height: 310px;
-            width: 90%;
             padding: 20px;
             margin-left: 2.5%;
+            margin-right: 2.5%;
         }
         .result{
             margin-top: 120px;
@@ -653,12 +655,12 @@
                 <div class="my_MBTI_perc">
                     <div style="color: #404040"><span class="underline">나의 MBTI 일치율</span></div>
                     <div style="margin-top: 15px; margin-bottom: 40px; color: #404040; font-size: 30px; text-align: center">"<?=$mbti?>"</div>
-                    <canvas id="my_MBTI_perc_pie-chart" height="270"></canvas>
+                    <canvas id="my_MBTI_perc_pie-chart"></canvas>
                 </div>
                 <div class="my_currents_MBTI">       
                     <div style="color: #404040"><span class="underline">나의 생체전류 MBTI</span></div>
                     <div style="margin-top: 15px; margin-bottom: 40px; color: #404040; font-size: 30px"><?=json_encode($type)?></div>
-                    <canvas id="my_currents_MBTI_pie-chart" height="270"></canvas>
+                    <canvas id="my_currents_MBTI_pie-chart"></canvas>
                 </div>
             </div>
                 <script>   
@@ -1017,6 +1019,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1036,6 +1039,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1055,6 +1059,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1074,6 +1079,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1093,6 +1099,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1112,6 +1119,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1131,6 +1139,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1150,6 +1159,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 title: {
                                     display: false,
                                     text: '나의 생체전류 MBTI'
@@ -1168,6 +1178,7 @@
                             }]
                         },
                         options: {
+                            maintainAspectRatio: false,
                             title: {
                                 display: false,
                                 text: '나의 생체전류 MBTI 일치율',
@@ -1197,10 +1208,10 @@
         </div>
         <div class="graph">
             <div class="currents_data_left_div">
-                <canvas id="currents_data_left" height="75"></canvas>
+                <canvas id="currents_data_left"></canvas>
             </div>
             <div class="currents_data_right_div">
-                <canvas id="currents_data_right" height="75"></canvas>
+                <canvas id="currents_data_right"></canvas>
             </div>
                     <script>
                         var avgs1_left = <?= json_encode($avgs1_left) ?>;
@@ -1242,6 +1253,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 responsive: true,
                                 title: {
                                     display: true,
@@ -1304,6 +1316,7 @@
                                 }]
                             },
                             options: {
+                                maintainAspectRatio: false,
                                 responsive: true,
                                 title: {
                                     display: true,
