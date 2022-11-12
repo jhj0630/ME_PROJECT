@@ -44,7 +44,7 @@ else if($type=="email"){
     else{
         echo "no2";
     }
-                            oci_free_statement($result2);
+    oci_free_statement($result2);
 }
 else if($type=="phone"){
     $phone_check = "SELECT * FROM INFO WHERE PHONE='$phone'";
