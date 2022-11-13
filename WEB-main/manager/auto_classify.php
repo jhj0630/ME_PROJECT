@@ -189,7 +189,7 @@ function calc($current = array(), $id)
 
     $type = "";
 
-    $ype_score_l = [];
+    $type_score_l = [];
     $type_score_r = [];
 
     $type_score_l[0] = Renotonia($organ_l);
