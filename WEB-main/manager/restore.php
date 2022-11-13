@@ -15,18 +15,8 @@ $password = "test1234";
 $connect = oci_connect($username, $password, $db);
 
 $id = $_POST["id"];
-//$id = "qwer";
-$pw = $_POST["pw"];
 
-$check_pw = "SELECT * FROM INFO WHERE ID = '$id'";
-$result1=oci_parse($connect, $check_pw);
-oci_execute($result1);
-$row = oci_fetch_array($result1, OCI_ASSOC + OCI_RETURN_NULLS);
-//oci_free_statement($result1);
-$pw_check = $row['PW'];
-echo "result: $result1 pwcheck:$pw_check";
-if($pw==$pw_check){
-    echo "pw checked";
+if(isset($id)){
     $move_info_data = "INSERT INTO INFO (ID, PW, AGE, SEX, PHONE, EMAIL, NAME) SELECT ID, PW, AGE, SEX, PHONE, EMAIL, NAME FROM INFO_BACKUP WHERE ID = '$id'";
     $result2=oci_parse($connect, $move_info_data);
     oci_execute($result2);
@@ -42,7 +32,7 @@ if($pw==$pw_check){
     oci_execute($result4);
     //oci_free_statement($result4);
 
-    $move_mbti_data = "INSERT INTO BODY_TYPE SELECT * FROM BODY_BACKUP_BACKUP WHERE ID = '$id'";
+    $move_mbti_data = "INSERT INTO BODY_TYPE SELECT * FROM BODY_TYPE_BACKUP WHERE ID = '$id'";
     $result5=oci_parse($connect, $move_mbti_data);
     oci_execute($result5);
     //oci_free_statement($result5);
@@ -57,7 +47,7 @@ if($pw==$pw_check){
     oci_execute($result7);
     //oci_free_statement($result7);
 
-    $remove_mbti = "DELETE FROM MBTI_BACKUP WHERE ID='$id'";
+    $remove_mbti = "DELETE FROM BODY_TYPE_BACKUP WHERE ID='$id'";
     $result8=oci_parse($connect, $remove_mbti);
     oci_execute($result8);
     //oci_free_statement($result8);
