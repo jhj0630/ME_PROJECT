@@ -294,7 +294,7 @@ else
                 <a href="manager_search.php" style="color: #404040; font-weight: bold">manage</a>
                 <a href="manager_logout.php" class="logout_btn">logout</a>
                 <a href="auto_classify.php">체질분류</a>
-                <a href="delete_backup.php">탈퇴회원데이터관리</a>
+                <a href="restore_management.php">탈퇴회원데이터관리</a>
             <?php
             }?>
 
