@@ -21,7 +21,7 @@
     $connect = oci_connect($username, $password, $db);
 
     if(!isset($_SESSION['ID'])){
-
+        echo "<script>alert('로그인 후 이용하세요.');location.replace('mem_login.php');</script>";
     }
     else
     {
@@ -320,6 +320,7 @@
                 </table>
                 <input type="button" value="수정" class="edit_btn" id="edit_btn" onclick='inputActive()'>
                 <input type="submit" value="완료" class="submit_btn">
+                <a href="member_withdrawal.php" style="float: right; text-decoration: none" onclick="if(!confirm('탈퇴 하시겠습니까?'))">회원탈퇴</a>
             </form>
         </div>
     </div>
