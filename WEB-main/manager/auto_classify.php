@@ -1,3 +1,7 @@
+<html>
+<a href="manager_main.php" style="color: #404040; font-weight: bold">Home</a>
+
+</html>
 <?php
 ob_start();
 putenv("NLS_LANG=AMERICAN_AMERICA.AL32UTF8");
@@ -189,7 +193,7 @@ function calc($current = array(), $id)
 
     $type = "";
 
-    $type_score_l = [];
+    $ype_score_l = [];
     $type_score_r = [];
 
     $type_score_l[0] = Renotonia($organ_l);
