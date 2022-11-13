@@ -204,7 +204,7 @@ else
                 $row1=oci_fetch_array($n1, OCI_ASSOC+OCI_RETURN_NULLS);
                 $result1 = $row1['COUNT(*)'];
 
-                $sql2 = "SELECT COUNT(*) FROM CURRENTS_BACKUP";
+                $sql2 = "SELECT COUNT(*) FROM CURRENTS";
                 $n2=oci_parse($connect, $sql2);
                 oci_execute($n2);
                 $row2=oci_fetch_array($n2, OCI_ASSOC+OCI_RETURN_NULLS);
