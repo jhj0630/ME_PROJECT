@@ -1,3 +1,7 @@
+<html>
+<a href="manager_main.php" style="color: #404040; font-weight: bold">Home</a>
+
+</html>
 <?php
 $db = '
 (DESCRIPTION =
