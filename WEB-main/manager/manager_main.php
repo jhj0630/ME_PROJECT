@@ -169,7 +169,7 @@ else
 </head>
 <body>
     <header>
-    <div class="logo"><a href="member_main.php">생체전류와 MBTI  </a><span class="logo_min"><a href="manager_main.php">관리자 페이지</span></a></div>
+    <div class="logo"><a href="../member/member_main.php">생체전류와 MBTI  </a><span class="logo_min"><a href="manager_main.php">관리자 페이지</span></a></div>
         <div class="link">
             <a href="manager_main.php" style="color: #404040; font-weight: bold">Home</a>
             <?php
