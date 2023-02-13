@@ -1,16 +1,8 @@
 <?php
 session_start();
-$db='
-(DESCRIPTION =
-        (ADDRESS_LIST=
-                (ADDRESS = (PROTOCOL = TCP)(HOST = 203.249.87.57)(PORT = 1521))
-        )
-        (CONNECT_DATA =
-        (SID = orcl)
-        )
-)';
-$username = "db501group5";
-$password = "test1234";
+$db='';
+$username = "";
+$password = "";
 $connect = oci_connect($username, $password, $db);
 
 $id=$_POST["id"];
